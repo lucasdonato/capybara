@@ -19,7 +19,7 @@ describe 'Tabelas', :tabs, :smoke do
     diesel = find('table tbody tr', text: '@vindiesel')
     movie = diesel.all('td')[2].text
 
-    expect(movie).to eql 'Fast & Furious'
+    expect(movie).to eql 'Velozes e Furiosos'
   end
 
   it 'deve exibir o insta do Chris Evans' do
