@@ -15,7 +15,7 @@ pipeline {
         }
         stage("Tests") {
             steps {
-                sh "bundle exec rspec  --format documentation --format json --out log/rspec_results.json"
+                sh "bundle exec rspec --format documentation --format json --out log/rspec_results.json"
             }
             post {
                 always {
