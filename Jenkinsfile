@@ -15,11 +15,11 @@ pipeline {
         }
         stage("Tests") {
             steps {
-                sh "bundle exec rspec --format documentation --format json --out log/rspec_results.json"
+                sh "bundle exec rspec --format documentation --format html --out log/rspec_results.html"
             }
             post {
                 always {
-                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'log', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'log', reportFiles: 'rspec_results.html', reportName: 'HTML Report', reportTitles: ''])
                 }
             }
         }
