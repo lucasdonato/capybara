@@ -17,7 +17,7 @@ RSpec.configure do |config|
 
   #redimensionando o tamanho da tela
  config.before(:example) do
-    page.current_window.resize_to(1000, 600)
+    page.current_window.resize_to(1440, 900)
   end
 
   #configurando screenshot
