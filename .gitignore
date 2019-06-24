@@ -1,3 +1,4 @@
-log/*.png
-log/*.html
-log/*.json
+log/
+
+#caso o git ignore não funcione é necessário remover o cache
+#git rm -r --cached .
