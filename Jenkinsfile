@@ -18,7 +18,7 @@ pipeline {
         }
         stage("Tests") {
             steps {
-                sh "bundle exec rspec -fd --format html --out log/rspec_results.html"
+                sh "bundle exec rspec -fd -t @alerts --format html --out log/rspec_results.html"
             }
             post {
                 always {
