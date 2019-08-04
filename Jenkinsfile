@@ -16,6 +16,8 @@ pipeline {
                 sh "bundle install"
 
                // sh "npm install -g allure-commandline"
+               sh "sudo apt-get install default-jdk"
+               
             }
         }
         stage("Tests") {
@@ -25,10 +27,12 @@ pipeline {
             post {
                 always {
                     allure([
-                        //includeProperties: false, 
-                        jdk: '', 
-                        results: [[path: 'allure-results']]
-                    ])                   
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results:[[path: 'allure-results']]
+                    ])                 
                     //adiciona o publish HTML para gerar relatório
                     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'log', reportFiles: 'rspec_results.html', reportName: 'HTML Report', reportTitles: ''])
                      //configurações do plugin de relatório
