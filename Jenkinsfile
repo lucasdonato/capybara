@@ -16,7 +16,7 @@ pipeline {
                 sh "bundle install"
 
                // sh "npm install -g allure-commandline"
-               sh "sudo apt-get install default-jdk"
+               sh "apt-get install default-jdk"
                
             }
         }
