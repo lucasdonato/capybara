@@ -7,12 +7,11 @@ pipeline {
             image "ruby:alpine"
         }
     }
-    agent {
-         dockerfile  true
-        }
-    
     stages {
         stage("Build") {
+            agent {
+                dockerfile {true}
+            }
             steps {
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
