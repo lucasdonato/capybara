@@ -7,12 +7,12 @@ pipeline {
             image "ruby:alpine"
         }
     }
-        node(){
+    stages {
+             node(){
                  def nodeHome = tool 'nodejs'
                  env.PATH="${env.PATH}:${nodeHome}/bin"
                  sh 'npm install'
             }  
-    stages {
         stage("Build") {
             tools {
                 nodejs "node"
