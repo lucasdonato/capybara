@@ -3,6 +3,7 @@ def COLOR_MAP = ['SUCCESS': 'good', 'FAILURE': 'danger', 'UNSTABLE': 'danger', '
 
 pipeline {
     agent {
+        dockerfile true
         docker {
             image "ruby:alpine"
         }
@@ -14,9 +15,6 @@ pipeline {
                 sh "./build/alpine.sh"
                 sh "gem install bundler -v 2.0.2"
                 sh "bundle install"
-
-               // sh "export JAVA_HOME=jdk-install-dir"
-               // sh "export PATH=$JAVA_HOMEbin:$PATH"
             }
         }
         stage("Tests") {
