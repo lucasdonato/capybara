@@ -9,9 +9,9 @@ pipeline {
     }
     stages {
         stage("Build") {
-            agent {
+           /*agent {
                 dockerfile true
-            }
+            }*/
             steps {
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
