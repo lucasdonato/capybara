@@ -3,12 +3,12 @@ def COLOR_MAP = ['SUCCESS': 'good', 'FAILURE': 'danger', 'UNSTABLE': 'danger', '
 
 pipeline {
     agent {
-        dockerfile {
-            true
-        }
-        
         docker {
             image "ruby:alpine"
+        }
+    agent {
+         dockerfile {
+            true
         }
     }
     stages {
