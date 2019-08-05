@@ -7,6 +7,8 @@ pipeline {
             image "ruby:alpine"
         }
     }
+    tools {nodejs "node"}
+    
     stages {
         stage("Build") {
             
