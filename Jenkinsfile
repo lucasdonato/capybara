@@ -7,14 +7,14 @@ pipeline {
             image "ruby:alpine"
         }
     }
-    
-    agent {
-        docker{
-            image "node:10.16-alpine"
-        }
-    }
+
 
     stages {
+        agent {
+            docker{
+                image "node:10.16-alpine"
+            }
+        }   
         stage("Build") {
             tools {nodejs "node"}       
             steps {
