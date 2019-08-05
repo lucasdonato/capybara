@@ -8,12 +8,13 @@ pipeline {
         }
     }
     stages {
-             node{
+              
+        stage("Build") {
+            node{
                  def nodeHome = tool 'nodejs'
                  env.PATH="${env.PATH}:${nodeHome}/bin"
                  sh 'npm install'
-            }  
-        stage("Build") {
+            } 
             tools {
                 nodejs "node"
             } 
