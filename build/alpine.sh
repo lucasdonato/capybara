@@ -6,8 +6,7 @@ apk update && \
     libxml2-dev \
     libxslt-dev \
     postgresql-dev \
-    sudo apt-get instala o openjdk-8-jre \
-    curl unzip libexif udev chromium chromium-chromedriver wait4ports xvfb xorg-server dbus ttf-freefont mesa-dri-swrast \
+    curl unzip libexif udev chromium chromium-chromedriver openjdk-8-jre wait4ports xvfb xorg-server dbus ttf-freefont mesa-dri-swrast \
     && rm -rf /var/cache/apk/*
 
     
