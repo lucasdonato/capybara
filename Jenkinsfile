@@ -10,17 +10,22 @@ pipeline {
 
     stages {
         stage("Build") {
-            tools {nodejs "node"}       
+            tools {nodejs "node"} 
+            node(){
+                 def nodeHome = tool 'nodejs'
+                 env.PATH="${env.PATH}:${nodeHome}/bin"
+                 sh 'npm install'
+            }      
             steps {
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
                 sh "gem install bundler -v 2.0.2"
                 sh "bundle install"
 
-                sh "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh"
-                sh 'export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm" [ -s "$NVM_DIR/nvm.sh" ] && \\. "$NVM_DIR/nvm.sh"'
-                sh "nvm install node 11"
-                sh "nvm use node 11"
+                //sh "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh"
+                //sh 'export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm" [ -s "$NVM_DIR/nvm.sh" ] && \\. "$NVM_DIR/nvm.sh"'
+                //sh "nvm install node 11"
+                //sh "nvm use node 11"
                 sh "npm install -g allure-commandline"
             }
         }
