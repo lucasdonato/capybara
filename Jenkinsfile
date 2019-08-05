@@ -17,6 +17,7 @@ pipeline {
                 sh "gem install bundler -v 2.0.2"
                 sh "bundle install"
                 sh "npm -v"
+                //sh "PATH=/sbin:/usr/sbin:/usr/bin:/usr/local/bin"
                 sh "npm install -g allure-commandline"
             }
         }
