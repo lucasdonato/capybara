@@ -17,6 +17,7 @@ pipeline {
                 sh "./build/alpine.sh"
                 sh "gem install bundler -v 2.0.2"
                 sh "bundle install"
+                sh "npm install -g allure-commandline"
             }
         }
         stage("Tests") {
