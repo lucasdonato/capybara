@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage("Build") {
             agent {
-                dockerfile {true}
+                dockerfile true
             }
             steps {
                 sh "chmod +x build/alpine.sh"
