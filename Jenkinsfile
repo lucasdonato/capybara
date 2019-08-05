@@ -8,14 +8,8 @@ pipeline {
         }
     }
 
-
     stages {
-       
         stage("Build") {
-             agent {
-                    image "node:10.16-alpine"
-                
-                }      
             tools {nodejs "node"}       
             steps {
                 sh "chmod +x build/alpine.sh"
