@@ -6,6 +6,7 @@ pipeline {
         docker {
             image "ruby:alpine"
         }
+    }
     agent {
          dockerfile {
             true
