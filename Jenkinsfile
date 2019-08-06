@@ -7,7 +7,11 @@ pipeline {
             image "ruby:alpine"
         }
     }
-         
+    agent {
+        docker {
+            image "node:10.16.1-alpine"
+        }
+    }    
     stages {
         stage("Build") {
             tools {nodejs "node"}
@@ -17,7 +21,7 @@ pipeline {
                 sh "gem install bundler -v 2.0.2"
                 sh "bundle install"
                 //sh 'npm config ls'
-                sh "sudo npm install -g allure-commandline"
+                //sh "npm install -g allure-commandline"
             }
         }
         stage("Tests") {
