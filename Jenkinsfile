@@ -6,33 +6,17 @@ pipeline {
         docker {
             image "ruby:alpine"
         }
+        tools {nodejs "node"}
     }
     stages {
         stage("Build") {
-         /*   node{
-                 def nodeHome = tool 'nodejs'
-                 env.PATH="${env.PATH}:${nodeHome}/bin"
-                 sh 'npm install'
-            }*/ 
-           /* tools {
-                nodejs "node"
-            } */
-            
-                /*nodejs(nodeJSInstallationName: 'Node 6.x', configId: '<config-file-provider-id>') {
-                    sh 'npm config ls'
-                
-            }*/
-                
+
             steps {
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
                 sh "gem install bundler -v 2.0.2"
                 sh "bundle install"
-
-                //sh "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh"
-                //sh 'export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm" [ -s "$NVM_DIR/nvm.sh" ] && \\. "$NVM_DIR/nvm.sh"'
-                //sh "nvm install node 11"
-                //sh "nvm use node 11"
+                sh 'npm config ls'
                 sh "npm install -g allure-commandline"
             }
         }
