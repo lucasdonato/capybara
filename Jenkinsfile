@@ -8,12 +8,6 @@ pipeline {
         }
     }
 
-    withEnv(['PATH+NODE=/something=/path/to/node/bin']) {
-             
-        sh "npm install -g"                  
-                
-    }
-
     stages {
         stage("Build") {
             //tools {nodejs "node"}
