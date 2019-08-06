@@ -6,8 +6,14 @@ pipeline {
         docker {
             image "ruby:alpine"
         }
-        tools {nodejs "node"}
     }
+    agent{
+        tools {
+            nodejs "node"
+        }
+    }
+        
+    
     stages {
         stage("Build") {
 
