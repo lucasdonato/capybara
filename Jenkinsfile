@@ -15,7 +15,7 @@ pipeline {
                     image "node:10.16-alpine"
                 }
             }*/
-            tools {nodejs "nodejs"}
+            //tools {nodejs "nodejs"}
 
             steps {
                 sh "chmod +x build/alpine.sh"
