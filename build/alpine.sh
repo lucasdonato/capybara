@@ -9,4 +9,8 @@ apk update && \
     curl unzip libexif udev chromium chromium-chromedriver nodejs wait4ports xvfb xorg-server dbus ttf-freefont mesa-dri-swrast \
     && rm -rf /var/cache/apk/*
 
+sudo apt-add-repository ppa:qameta/allure
+sudo apt-get update
+sudo apt-get install allure
+
     

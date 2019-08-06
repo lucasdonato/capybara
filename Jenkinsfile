@@ -24,10 +24,6 @@ pipeline {
                 sh "bundle install"
                 //sh 'npm config ls'
                 //sh "npm install -g allure-commandline"
-
-                sh "sudo apt-add-repository ppa:qameta/allure"
-                sh "sudo apt-get update"
-                sh "sudo apt-get install allure"
             }
         }
         stage("Tests") {
