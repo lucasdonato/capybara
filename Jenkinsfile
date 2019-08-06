@@ -12,11 +12,8 @@ pipeline {
         stage("Build") {
             tools {nodejs "nodejs"}
 
-        
-            sh 'npm --version'
-    
-            
             steps {
+                 sh 'npm --version'
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
                 sh "gem install bundler -v 2.0.2"
