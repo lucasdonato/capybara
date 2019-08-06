@@ -26,7 +26,7 @@ pipeline {
                 //sh "npm install -g allure-commandline"
             }
         }
-        stage("node"){
+        stages("node"){
             nodejs {
                 env.NODEJS_HOME = "${tool 'Node 6.x'}"
                 // on linux / mac
