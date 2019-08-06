@@ -14,9 +14,14 @@ pipeline {
                  env.PATH="${env.PATH}:${nodeHome}/bin"
                  sh 'npm install'
             }*/ 
-            tools {
+           /* tools {
                 nodejs "node"
-            } 
+            } */
+             steps {
+                nodejs(nodeJSInstallationName: 'Node 6.x', configId: '<config-file-provider-id>') {
+                    sh 'npm config ls'
+                }
+            }
                 
             steps {
                 sh "chmod +x build/alpine.sh"
