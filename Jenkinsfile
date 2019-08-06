@@ -15,7 +15,7 @@ pipeline {
                     image "node:10.16-alpine"
                 }
             }*/
-            //tools {nodejs "nodejs"}
+            tools {nodejs "nodejs"}
 
             steps {
                 sh "chmod +x build/alpine.sh"
@@ -24,6 +24,16 @@ pipeline {
                 sh "bundle install"
                 //sh 'npm config ls'
                 //sh "npm install -g allure-commandline"
+            }
+        }
+        stage("node"){
+            nodejs {
+                env.NODEJS_HOME = "${tool 'Node 6.x'}"
+                // on linux / mac
+                env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+                // on windows
+                env.PATH="${env.NODEJS_HOME};${env.PATH}"
+                sh 'npm --version'
             }
         }
         stage("Tests") {
