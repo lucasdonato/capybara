@@ -10,7 +10,8 @@ pipeline {
 
     stages {
         stage("Build") {
-            tools {nodejs "node"}
+            tools {nodejs "nodejs"
+            sh "npm install -g allure-commandline"}
             steps {
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
