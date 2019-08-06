@@ -13,7 +13,7 @@ pipeline {
             tools {nodejs "nodejs"}
 
             steps {
-                 sh 'npm --version'
+                sh 'java --version'
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
                 sh "gem install bundler -v 2.0.2"
