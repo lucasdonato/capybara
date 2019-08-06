@@ -8,9 +8,8 @@ pipeline {
         }
     }
     agent{
-        tools {
             nodejs "node"
-        }
+        
     }
         
     
