@@ -12,12 +12,9 @@ pipeline {
         stage("Build") {
             tools {nodejs "nodejs"}
 
-        node {
         
             sh 'npm --version'
-        }
-
-
+    
             
             steps {
                 sh "chmod +x build/alpine.sh"
