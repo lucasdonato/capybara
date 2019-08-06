@@ -26,8 +26,8 @@ pipeline {
                 //sh "npm install -g allure-commandline"
             }
         }
-        stages("node"){
-            nodejs {
+       
+            node {
                 env.NODEJS_HOME = "${tool 'Node 6.x'}"
                 // on linux / mac
                 env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
@@ -35,7 +35,7 @@ pipeline {
                 env.PATH="${env.NODEJS_HOME};${env.PATH}"
                 sh 'npm --version'
             }
-        }
+        
         stage("Tests") {
             steps {
                 sh "bundle exec rspec -fd -t @alerts --format html --out log/rspec_results.html"
