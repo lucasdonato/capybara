@@ -32,6 +32,7 @@ pipeline {
             }
             post {
                 always {
+                    sh "allure serve"
               
                         allure([
                             results:[[path: 'allure-results']]
