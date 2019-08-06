@@ -26,10 +26,12 @@ pipeline {
             }
             post {
                 always {
-                    allure([
-                        jdk('jdk8')
-                        results:[[path: 'allure-results']]
-                    ])                 
+                    node{
+                        allure([
+                            results:[[path: 'allure-results']]
+                        ])  
+                    }
+                                  
                     //adiciona o publish HTML para gerar relatório
                     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'log', reportFiles: 'rspec_results.html', reportName: 'HTML Report', reportTitles: ''])
                      //configurações do plugin de relatório
