@@ -7,14 +7,16 @@ pipeline {
             image "ruby:alpine"
         }
     }
-    agent {
-        docker {
-            image "node:10.16.1-alpine"
-        }
-    }    
+   
     stages {
         stage("Build") {
-            tools {nodejs "node"}
+            //tools {nodejs "node"}
+            withEnv(['PATH+NODE=/something=/path/to/node/bin']) {
+                stage('Prepare') {
+                    sh "npm install -g"                  
+                }
+            }
+
             steps {
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
