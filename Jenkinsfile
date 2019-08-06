@@ -27,9 +27,7 @@ pipeline {
             post {
                 always {
                     allure([
-                        includeProperties: false,
-                        properties: [],
-                        reportBuildPolicy: 'ALWAYS',
+                        jdk('jdk8')
                         results:[[path: 'allure-results']]
                     ])                 
                     //adiciona o publish HTML para gerar relatório
