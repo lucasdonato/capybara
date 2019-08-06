@@ -10,7 +10,7 @@ pipeline {
 
     stages {
         stage("Build") {
-            //tools {nodejs "node"}
+            tools {nodejs "node"}
             steps {
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
