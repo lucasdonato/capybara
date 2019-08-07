@@ -38,6 +38,9 @@ pipeline {
                           //allure includeProperties: false, jdk: '/usr/lib/jvm/java-1.8-openjdk', results: [[path: 'allure-results']]
                   //}
               }
+              /*success {
+                   mail to: "ldonato@gattecnologia.com.br", subject: "The Pipeline success" 
+                 }*/
               
               //  always {
               
