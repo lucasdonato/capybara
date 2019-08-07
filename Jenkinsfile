@@ -33,7 +33,7 @@ pipeline {
             }
             post {
                 always{
-                  node('master') {
+                  node/*('master')*/ {
                           allure report: 'allure_reports', results: [[path: 'allure_results']]
                   }
               }
