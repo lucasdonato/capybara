@@ -33,10 +33,10 @@ pipeline {
             }
             post {
                 always{
-                  node('') {
+                  //node('') {
                           allure results: [[path: 'allure-results']]
                           //allure includeProperties: false, jdk: '/usr/lib/jvm/java-1.8-openjdk', results: [[path: 'allure-results']]
-                  }
+                  //}
               }
               
               //  always {
