@@ -33,10 +33,13 @@ pipeline {
             }
             post {
                 always{
-                  //node('') {
+                  node('vagrant-slave') {
+                      env.JAVA_HOME="${tool 'jdk-8u45'}"
+                      env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
+                      sh 'java -version'
                           allure results: [[path: 'allure-results']]
                           //allure includeProperties: false, jdk: '/usr/lib/jvm/java-1.8-openjdk', results: [[path: 'allure-results']]
-                  //}
+                  }
               }
               /*success {
                    mail to: "ldonato@gattecnologia.com.br", subject: "The Pipeline success" 
