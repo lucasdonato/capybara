@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1564778280197" stop="1564778284989">
+  <name>Caixas de sele&#xE7;&#xE3;o</name>
+  <title>Caixas de sele&#xE7;&#xE3;o</title>
+  <test-cases>
+    <test-case start="1564778280197" stop="1564778281400" status="passed">
+      <name>Caixas de sele&#xE7;&#xE3;o marcando uma op&#xE7;&#xE3;o</name>
+      <title>Caixas de sele&#xE7;&#xE3;o marcando uma op&#xE7;&#xE3;o</title>
+      <steps/>
+      <attachments>
+        <attachment source="b85125481354c2fa40f7edd42fea4e3122b1f5eac377aa5740731729bd034cfb-attachment.png" title="ScreenXote" size="162344" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1564778281401" stop="1564778282579" status="passed">
+      <name>Caixas de sele&#xE7;&#xE3;o desmarcando uma op&#xE7;&#xE3;o</name>
+      <title>Caixas de sele&#xE7;&#xE3;o desmarcando uma op&#xE7;&#xE3;o</title>
+      <steps/>
+      <attachments>
+        <attachment source="ebcc4ad4155a081769cfcf45a142cfb3045ac8eec74adbecdba7e67fc0cc784e-attachment.png" title="ScreenXote" size="161946" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1564778282581" stop="1564778283775" status="passed">
+      <name>Caixas de sele&#xE7;&#xE3;o marcando com find set true</name>
+      <title>Caixas de sele&#xE7;&#xE3;o marcando com find set true</title>
+      <steps/>
+      <attachments>
+        <attachment source="8f10eaddafc1b6682a7e0b8ae4e85a50b9da60a5a205008ddff18bd35e23806b-attachment.png" title="ScreenXote" size="162333" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1564778283776" stop="1564778284988" status="passed">
+      <name>Caixas de sele&#xE7;&#xE3;o desmarcando com find set false</name>
+      <title>Caixas de sele&#xE7;&#xE3;o desmarcando com find set false</title>
+      <steps/>
+      <attachments>
+        <attachment source="499007db60e7226bbeca2e107daf838fc4839db738682fc50c35376c855ca774-attachment.png" title="ScreenXote" size="161978" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="thread" value="22868220"/>
+    <label name="host" value="DESKTOP-EQ35ECM"/>
+  </labels>
+</ns2:test-suite>

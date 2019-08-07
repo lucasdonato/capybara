@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1564778333739" stop="1564778335719">
+  <name>iframes ruim</name>
+  <title>iframes ruim</title>
+  <test-cases>
+    <test-case start="1564778333740" stop="1564778335718" status="passed">
+      <name>iframes ruim carrinho deve estar vazio</name>
+      <title>iframes ruim carrinho deve estar vazio</title>
+      <steps/>
+      <attachments>
+        <attachment source="ee50d4c5951b86f8397a6576ab8096f172986df9a898ea17321d5a40dbcdb8e5-attachment.png" title="ScreenXote" size="204809" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="thread" value="22868220"/>
+    <label name="host" value="DESKTOP-EQ35ECM"/>
+  </labels>
+</ns2:test-suite>

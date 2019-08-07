@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1564778315484" stop="1564778316460">
+  <name>Meu primeiro script</name>
+  <title>Meu primeiro script</title>
+  <test-cases>
+    <test-case start="1564778315485" stop="1564778316459" status="passed">
+      <name>Meu primeiro script visitar a p&#xE1;gina</name>
+      <title>Meu primeiro script visitar a p&#xE1;gina</title>
+      <steps/>
+      <attachments>
+        <attachment source="94879a9a30db2959f355b19693c5fd0c4b0365bd2db82cbd0935d2c7c9299282-attachment.png" title="ScreenXote" size="184115" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="thread" value="22868220"/>
+    <label name="host" value="DESKTOP-EQ35ECM"/>
+  </labels>
+</ns2:test-suite>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1564778342130" stop="1564778345742">
+  <name>Login com Cadastro</name>
+  <title>Login com Cadastro</title>
+  <test-cases>
+    <test-case start="1564778342130" stop="1564778344115" status="passed">
+      <name>Login com Cadastro login com sucesso</name>
+      <title>Login com Cadastro login com sucesso</title>
+      <steps/>
+      <attachments>
+        <attachment source="d5d74d2f81b36a30b33f0f794c5cd50aa680413b133d127cd63f9d0d380e81f1-attachment.png" title="ScreenXote" size="159846" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1564778344121" stop="1564778345741" status="passed">
+      <name>Login com Cadastro cadastro com sucesso</name>
+      <title>Login com Cadastro cadastro com sucesso</title>
+      <steps/>
+      <attachments>
+        <attachment source="0d7e9a5a2db166d3762ca6cc5f5bf30994d581692c0ec95fd7229b7f5518b0d2-attachment.png" title="ScreenXote" size="177558" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="thread" value="22868220"/>
+    <label name="host" value="DESKTOP-EQ35ECM"/>
+  </labels>
+</ns2:test-suite>

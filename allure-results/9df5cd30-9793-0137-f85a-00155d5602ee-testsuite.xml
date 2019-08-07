@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1564778339945" stop="1564778342101">
+  <name>Login 2</name>
+  <title>Login 2</title>
+  <test-cases>
+    <test-case start="1564778339945" stop="1564778342094" status="passed">
+      <name>Login 2 com data de nascimento</name>
+      <title>Login 2 com data de nascimento</title>
+      <steps/>
+      <attachments>
+        <attachment source="d5d74d2f81b36a30b33f0f794c5cd50aa680413b133d127cd63f9d0d380e81f1-attachment.png" title="ScreenXote" size="159846" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="thread" value="22868220"/>
+    <label name="host" value="DESKTOP-EQ35ECM"/>
+  </labels>
+</ns2:test-suite>

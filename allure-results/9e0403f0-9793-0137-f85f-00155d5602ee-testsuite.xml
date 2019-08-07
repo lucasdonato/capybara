@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1564778372734" stop="1564778377346">
+  <name>Select2 multiple</name>
+  <title>Select2 multiple</title>
+  <test-cases>
+    <test-case start="1564778372735" stop="1564778375574" status="passed">
+      <name>Select2 multiple selecionar atores</name>
+      <title>Select2 multiple selecionar atores</title>
+      <steps/>
+      <attachments>
+        <attachment source="e057c1af74269fe57cae2ec4f716eefb8ecb4395abfb75591484f9770c5f6484-attachment.png" title="ScreenXote" size="19603" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1564778375575" stop="1564778377345" status="passed">
+      <name>Select2 multiple apenas atores com a letra a</name>
+      <title>Select2 multiple apenas atores com a letra a</title>
+      <steps/>
+      <attachments>
+        <attachment source="25dd22b546a00f62ca410cbe04149a2cc9eba4ef4f7c7060827315b202fddc73-attachment.png" title="ScreenXote" size="19423" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="thread" value="22868220"/>
+    <label name="host" value="DESKTOP-EQ35ECM"/>
+  </labels>
+</ns2:test-suite>

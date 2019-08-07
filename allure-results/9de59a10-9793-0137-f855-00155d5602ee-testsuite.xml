@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1564778316462" stop="1564778320560">
+  <name>Mouse Hover</name>
+  <title>Mouse Hover</title>
+  <test-cases>
+    <test-case start="1564778316463" stop="1564778317846" status="passed">
+      <name>Mouse Hover quando passo o mouse sobre o blade</name>
+      <title>Mouse Hover quando passo o mouse sobre o blade</title>
+      <steps/>
+      <attachments>
+        <attachment source="2af74266bb6e5a92839b07503d5bc4c6626150bcf6397017a3da75cabe24ce7c-attachment.png" title="ScreenXote" size="364901" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1564778317848" stop="1564778319197" status="passed">
+      <name>Mouse Hover quando passo o mouse sobre o pantera negra</name>
+      <title>Mouse Hover quando passo o mouse sobre o pantera negra</title>
+      <steps/>
+      <attachments>
+        <attachment source="eafb92b7948124d6aa145f3b3d09fd9e78d135943e5ab07e76affed465beafa4-attachment.png" title="ScreenXote" size="365233" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1564778319198" stop="1564778320559" status="passed">
+      <name>Mouse Hover quando passo o mouse sobre o homeme aranha</name>
+      <title>Mouse Hover quando passo o mouse sobre o homeme aranha</title>
+      <steps/>
+      <attachments>
+        <attachment source="d284c3318d34b868ac56164fc2a72ad93521ed85ec9c2ed9499e4c74feaea5a7-attachment.png" title="ScreenXote" size="365073" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="thread" value="22868220"/>
+        <label name="host" value="DESKTOP-EQ35ECM"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="thread" value="22868220"/>
+    <label name="host" value="DESKTOP-EQ35ECM"/>
+  </labels>
+</ns2:test-suite>
