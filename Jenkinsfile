@@ -7,6 +7,8 @@ pipeline {
         
     stage('Cloning Git') {
       steps {
+          sh "chmod +x build/alpine.sh"
+                sh "./build/alpine.sh"
         git 'https://github.com/gustavoapolinario/node-todo-frontend'
       }
     }
