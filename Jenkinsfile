@@ -9,21 +9,11 @@ pipeline {
     }
     stages {
         stage("Build") {
-            /*agent{
-                docker{
-                    image "node:10.16-alpine"
-                }
-            }*/
-            tools {nodejs "nodejs"}
-
             steps {
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
                 sh "gem install bundler -v 2.0.2"
                 sh "bundle install"
-
-                //sh 'npm config ls'
-                //sh "npm install -g allure-commandline"
             }
         }
            
@@ -33,32 +23,18 @@ pipeline {
             }
             post {
                 always{
-                  node('vagrant-slave') {
-                      env.JAVA_HOME="${tool 'jdk-8u45'}"
-                      env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
-                      sh 'java -version'
-                          allure results: [[path: 'allure-results']]
-                          //allure includeProperties: false, jdk: '/usr/lib/jvm/java-1.8-openjdk', results: [[path: 'allure-results']]
+                
+                   //adiciona o publish HTML para gerar relatório
+                   publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'log', reportFiles: 'rspec_results.html', reportName: 'HTML Report', reportTitles: ''])
+                   //configurações do slack
+                   slackSend channel: "#automacao-de-testes",
+                        color: COLOR_MAP[currentBuild.currentResult],
+                        message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Mais informacoes acesse: ${env.BUILD_URL}"
+                  
+                    //envio de email
+                    emailext attachLog: true, attachmentsPattern: 'log/rspec_results.html', body: 'Relatório final jenkins', replyTo: 'lucaspolimig96@gmail.com', subject: 'Execução Testes Jenkins', to: 'lucaspolimig96@gmail.com'    
                   }
               }
-              /*success {
-                   mail to: "ldonato@gattecnologia.com.br", subject: "The Pipeline success" 
-                 }*/
-              
-              //  always {
-              
-                       // allure includeProperties: false, jdk: '', results: [[path: 'allure-results'], [path: 'allure-results']]
-                
-                                  
-                    //adiciona o publish HTML para gerar relatório
-                  //  publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'log', reportFiles: 'rspec_results.html', reportName: 'HTML Report', reportTitles: ''])
-                     //configurações do plugin de relatório
-                   // cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'log', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
-                    //configurações do slack
-                   // slackSend channel: "#automacao-de-testes",
-                       // color: COLOR_MAP[currentBuild.currentResult],
-                       // message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Mais informacoes acesse: ${env.BUILD_URL}"
-                //}
             }
         }
     }
