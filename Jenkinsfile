@@ -2,13 +2,16 @@
 def COLOR_MAP = ['SUCCESS': 'good', 'FAILURE': 'danger', 'UNSTABLE': 'danger', 'ABORTED': 'danger']
 
 pipeline {
-    agent {
-        docker {
-            image "ruby:alpine"
-        }
-    }
+    
+    agent none
+    
     stages {
         stage("Build") {
+            agent {
+                docker {
+                    image "ruby:alpine"
+                }              
+            }
             steps {
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
