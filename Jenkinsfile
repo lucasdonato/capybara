@@ -34,8 +34,7 @@ pipeline {
                     //envio de email
                     emailext attachLog: true, attachmentsPattern: 'log/rspec_results.html', body: 'Relatório final jenkins', replyTo: 'lucaspolimig96@gmail.com', subject: 'Execução Testes Jenkins', to: 'lucaspolimig96@gmail.com'    
                   }
-              }
             }
-        }
+         }
     }
 }
