@@ -21,6 +21,11 @@ pipeline {
         }
            
         stage("Tests") {
+            agent {
+                docker {
+                    image "ruby:alpine"
+                }              
+            }
             steps {
                 sh "bundle exec rspec -fd -t @alerts --format html --out log/rspec_results.html"
             }
