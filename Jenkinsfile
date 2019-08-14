@@ -3,15 +3,16 @@ def COLOR_MAP = ['SUCCESS': 'good', 'FAILURE': 'danger', 'UNSTABLE': 'danger', '
 
 pipeline {
     
-    agent none
-    
-    stages {
-        stage("Build") {
-            agent {
+    //agent none
+    agent {
                 docker {
                     image "ruby:alpine"
                 }              
             }
+    
+    stages {
+        stage("Build") {
+            
             steps {
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
@@ -21,11 +22,11 @@ pipeline {
         }
            
         stage("Tests") {
-            agent {
-                docker {
-                    image "ruby:alpine"
-                }              
-            }
+            //agent {
+             //   docker {
+               //     image "ruby:alpine"
+                //}              
+           // }
             steps {
                 sh "bundle exec rspec -fd -t @alerts --format html --out log/rspec_results.html"
             }
